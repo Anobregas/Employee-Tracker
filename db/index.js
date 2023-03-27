@@ -10,6 +10,11 @@ const connection = mysql.createConnection({
     database: 'employee_db'
 });
 
+connection.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
+
 // Prompt the user to choose an option
 inquirer.prompt([
     {
