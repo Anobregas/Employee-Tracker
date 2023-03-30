@@ -3,6 +3,9 @@ const mysql = require("mysql2");
 
 // create the Express app
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 
 // set up the MySQL database connection
 const db = mysql.createConnection({
