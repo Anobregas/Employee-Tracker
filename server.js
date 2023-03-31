@@ -1,5 +1,6 @@
 const express = require("express");
 const mysql = require("mysql2");
+const path = require("path");
 
 // create the Express app
 const app = express();
@@ -25,6 +26,9 @@ db.connect((err) => {
 });
 
 // set up routes
+//app.get('/', (req, res) =>
+   // res.sendFile(path.join(__dirname, '/index.js'))
+//);
 
 // GET all departments
 app.get("/departments", (req, res) => {
